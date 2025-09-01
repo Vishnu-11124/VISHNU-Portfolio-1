@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .typing {
+      font-size: 50px;
+      font-weight: bold;
+      color: #0f172a;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #3b82f6;
+      width: 0;
+      animation: typing 3s steps(6, end) forwards, blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 6ch; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="typing">vishnu</h1>
+</body>
+</html>
