@@ -10,3 +10,10 @@ window.addEventListener("load", () => {
         document.body.style.overflow = "auto"; // enable scrolling again
       }, 2500);
 });
+
+function toggleMenu() {
+    const menu = document.querySelector(".menu-links");
+    const icon = document.querySelector(".hamburger-icon");
+    menu.classList.toggle("open");
+    icon.classList.toggle("open");
+}
