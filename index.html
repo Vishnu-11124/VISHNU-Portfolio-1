@@ -32,21 +32,21 @@
             <button><img src="./images/moon_icon.png" class="w-6" alt=""></button>
             <a href="#contact" class="hidden lg:flex item-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">Contact <img src="./images/arrow-icon.png" alt="" class="w-3 h-2"></a>  
 
-            <button class="block md:hidden ml-3">
+            <button class="block md:hidden ml-3" onclick="openMenu()">
                 <img src="./images/menu-black.png" class="w-6" alt="">
             </button>
         </div>
 
         <!-- Mobile section -->
          <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 gap-4">
-            <div class="absolute top-6 right-6">
+            <div class="absolute top-6 right-6" onclick="closeMenu()">
                 <img src="./images/close-black.png" class="w-5 cursor-pointer" alt="">
             </div>
-            <li><a href="">Home</a></li>
-            <li><a href="">About Me</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">My Work</a></li>
-            <li><a href="">Contact Me</a></li>
+            <li><a href="" onclick="closeMenu()">Home</a></li>
+            <li><a href="" onclick="closeMenu()">About Me</a></li>
+            <li><a href="" onclick="closeMenu()">Services</a></li>
+            <li><a href="" onclick="closeMenu()">My Work</a></li>
+            <li><a href="" onclick="closeMenu()">Contact Me</a></li>
          </ul>
     </nav>
     
