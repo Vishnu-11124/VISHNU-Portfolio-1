@@ -24,7 +24,7 @@
             <li><a href="">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <!-- <li><a href="">Services</a></li> -->
-            <li><a href="">My Work</a></li>
+            <li><a href="#work">My Work</a></li>
             <li><a href="">Contact Me</a></li>
         </ul>
 
@@ -45,7 +45,7 @@
             <li><a href="" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About Me</a></li>
             <!-- <li><a href="" onclick="closeMenu()">Services</a></li> -->
-            <li><a href="" onclick="closeMenu()">My Work</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
             <li><a href="" onclick="closeMenu()">Contact Me</a></li>
          </ul>
          
@@ -105,16 +105,29 @@
         <h2 class="text-center text-5xl">Education</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
             <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px__0_black] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-                <img src="./images/web-icon.png" class="w-10" alt="">
-                <h3 class="text-lg my-4 text-gray-700">Web Design</h3>
-                <p class="text-sm text-gray-600 leading-5">Web development is the process of building, programming...</p>
-                <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a>
+                <div class="flex gap-2">
+                    <img src="./images/logo.jpg" class="w-8" alt="">
+                    <h3 class="text-md text-gray-700 my-3">Kannur University</h3>
+                </div>
+                <h3 class="text-lg text-gray-700 my-3">MCA</h3>
+                <div class="my-2">
+                    <p class="text-sm text-gray-600 leading-5">2023 - 2025</p>
+                    <p class="text-sm text-gray-600 leading-5">Chinmaya Institute of Technology</p>
+                    <!-- <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a> -->
+                </div>
             </div>
-            <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px__0_black] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
-                <img src="./images/web-icon.png" class="w-10" alt="">
-                <h3 class="text-lg my-4 text-gray-700">Web Design</h3>
-                <p class="text-sm text-gray-600 leading-5">Web development is the process of building, programming...</p>
-                <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a>
+
+             <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px__0_black] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+                <div class="flex gap-2">
+                    <img src="./images/logo.jpg" class="w-8" alt="">
+                    <h3 class="text-md text-gray-700 my-3">Kannur University</h3>
+                </div>
+                <h3 class="text-lg text-gray-700 my-3">Bsc CS</h3>
+                <div class="my-2">
+                    <p class="text-sm text-gray-600 leading-5">2020 - 2023</p>
+                    <p class="text-sm text-gray-600 leading-5">Taliparamba Arts & Science College</p>
+                    <!-- <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a> -->
+                </div>
             </div>
         </div>
      </div>
@@ -134,6 +147,90 @@
      </div>
 
     <!-- My Works  -->
+      <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+        <h2 class="text-center text-5xl">My Latest Works</h2>
+        <p class="text-center max-w-2xl mt-5 mb-12 mx-auto">Explore this collection of projects showcasing my expertise in frontend development.</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 my-10 gap-5">
+            <!-- Single Card -->
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div class="flex flex-col items-center justify-center">
+                        <h2 class="font-semibold">Frontend Project</h2>
+                        <p class="text-sm text-gray-700">Web Design</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 mt-2">
+                        <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
+                             <a href=""><img src="./images/github.png" class="w-6" alt=""></a>
+                        </div>
+                        <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
+                             <a href=""><img src="./images/send-icon.png" class="w-3" alt=""></a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div class="flex flex-col items-center justify-center">
+                        <h2 class="font-semibold">Frontend Project</h2>
+                        <p class="text-sm text-gray-700">Web Design</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 mt-2">
+                        <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
+                             <a href=""><img src="./images/github.png" class="w-6" alt=""></a>
+                        </div>
+                        <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
+                             <a href=""><img src="./images/send-icon.png" class="w-3" alt=""></a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div class="flex flex-col items-center justify-center">
+                        <h2 class="font-semibold">Frontend Project</h2>
+                        <p class="text-sm text-gray-700">Web Design</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 mt-2">
+                        <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
+                             <a href=""><img src="./images/github.png" class="w-6" alt=""></a>
+                        </div>
+                        <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
+                             <a href=""><img src="./images/send-icon.png" class="w-3" alt=""></a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">   
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div class="flex flex-col items-center justify-center">
+                        <h2 class="font-semibold">Frontend Project</h2>
+                        <p class="text-sm text-gray-700">Web Design</p>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 mt-2">
+                        <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
+                             <a href=""><img src="./images/github.png" class="w-6" alt=""></a>
+                        </div>
+                        <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
+                             <a href=""><img src="./images/send-icon.png" class="w-3" alt=""></a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="w-max flex items-center justify-center gap-2 text-blue-400 border-[0.5px] border-gray-700 py-3 px-10 mx-auto my-20 rounded-full hover:bg-[#fcf4ff] duration-500">Show More </a>
+      </div>
     
 
     <!-- Custom Js files -->
