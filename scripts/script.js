@@ -23,7 +23,7 @@ function closeMenu(){
 
 window.addEventListener("scroll", function(){
     const nav = document.querySelector("nav");
-    const navLinks = document.querySelectorAll("nav ul");
+    const navLinks = document.querySelector("nav ul");
     if(this.scrollY > 50){
         nav.classList.add("bg-white", "bg-opacity-50",'backdrop-blur-lg', 'shadow-sm');
         navLinks.classList.remove('bg-white', 'bg-opacity-50','shadow-sm');
