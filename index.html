@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <!-- Tailwind CSS files -->
     <script src="https://cdn.tailwindcss.com"></script>
-      <script>
+    <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Mobile section -->
-            <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-gray-100 transition duration-500 gap-4">
+            <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen text-blue-400 bg-gray-100 transition duration-500 gap-4">
                 <div class="absolute top-6 right-6" onclick="closeMenu()">
                     <img src="./images/close-black.png" class="w-5 cursor-pointer" alt="">
                 </div>
@@ -152,8 +152,8 @@
                             <h3 class="my-4 font-semibold text-gray-700">MySql</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/project-icon.png" class="w-7 mt-3" alt="">
-                            <h3 class="my-4 font-semibold text-gray-700">Experience</h3>   
+                            <img src="./images/skills/c.png" class="w-11 mt-3" alt="">
+                            <h3 class="my-4 font-semibold text-gray-700">C</h3>   
                         </li>
                     </ul>
                 </div>
@@ -302,12 +302,15 @@
             <h2 class="text-center text-5xl">Get in touch</h2>
             <p class="text-center max-w-2xl mt-5 mb-12 mx-auto">If you have any questions, comments or feedback, please use the form below.</p>
 
-            <form action="" class="max-w-2xl mx-auto">
+            <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+
+                <input type="hidden" name="access_key" value="eba5ae30-80ef-4645-9c4e-0d7b01cf2f7c">
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8">
-                    <input type="text" placeholder="Enter your name." class="flex-1 p-3 outline-none border-[0.5px] border-gray-500 rounded-md bg-white">
-                    <input type="email" placeholder="Enter your email." class="flex-1 p-3 outline-none border-[0.5px] border-gray-500 rounded-md bg-white">
+                    <input type="text" placeholder="Enter your name." class="flex-1 p-3 outline-none border-[0.5px] border-gray-500 rounded-md bg-white" required name="name">
+                    <input type="email" placeholder="Enter your email." class="flex-1 p-3 outline-none border-[0.5px] border-gray-500 rounded-md bg-white" required name="email">
                 </div>
-                <textarea rows="6" placeholder="Enter your message." class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"></textarea>
+                <textarea rows="6" placeholder="Enter your message." class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6" required name="message"></textarea>
                 <button class="py-3 px-8 w-max flex items-center justify-center gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500">Submit Now</button>
             </form>
         </div>
