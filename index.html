@@ -211,91 +211,270 @@
         </div>
 
         <!-- My Works  -->
-        <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
-            <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
-            <h2 class="text-center text-5xl">My Latest Works</h2>
-            <p class="text-center max-w-2xl mt-5 mb-12 mx-auto">Explore this collection of projects showcasing my expertise in frontend development.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
-                <!-- Single Card -->
-                <div class="aspect-square bg-[url('./images/calculator.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
-                    <div class="bg-gray-100 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7">
+         
+        <div id="work" class="w-full px-4 sm:px-8 lg:px-[12%] py-10 scroll-mt-20">
+        <!-- Section Header -->
+        <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+        <h2 class="text-center text-5xl">My Latest Works</h2>
+        <p class="text-center max-w-2xl mt-5 mb-12 mx-auto">Explore this collection of projects showcasing my expertise in frontend development.</p>
 
-                        <div class="flex flex-col items-center justify-center">
-                            <h2 class="font-semibold text-black">Modern Calculator</h2>
-                            <p class="text-sm text-gray-700">Fast, clean, modern</p>
-                        </div>
-                        
-                        <div class="flex items-center gap-3 mt-2">
-                            <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
-                                <a href="https://github.com/Vishnu-11124/Calculator"><img src="./images/github.png" class="w-6" alt=""></a>
+        <!-- Slider Container -->
+        <div class="slider-container max-w-7xl mx-auto relative">
+            <!-- Navigation Buttons -->
+            <button class="nav-btn nav-btn-left" onclick="prevSlide()" aria-label="Previous">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+
+            <button class="nav-btn nav-btn-right" onclick="nextSlide()" aria-label="Next">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <!-- Slider Track -->
+            <div class="slider-track" id="sliderTrack">
+                <!-- Project 1 - Calculator -->
+                <div class="slide p-4">
+                    <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg relative group h-96">
+                        <div class="shine-effect h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/6927334/pexels-photo-6927334.jpeg');">
+                            <!-- Overlay -->
+                            <div class="project-overlay"></div>
+                            
+                            <!-- Content -->
+                            <div class="project-content text-white">
+                                <h3 class="text-2xl font-bold mb-2">Modern Calculator</h3>
+                                <p class="text-sm text-gray-200 mb-4">A sleek, responsive calculator with modern UI and smooth animations</p>
+                                
+                                <!-- Tech Stack
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs bg-orange-500 text-white px-3 py-1 rounded-full">HTML</span>
+                                    <span class="tech-badge text-xs bg-blue-500 text-white px-3 py-1 rounded-full">CSS</span>
+                                    <span class="tech-badge text-xs bg-yellow-500 text-white px-3 py-1 rounded-full">JavaScript</span>
+                                </div> -->
+                                
+                                <!-- Links -->
+                                <div class="flex items-center gap-3">
+                                    <a href="https://github.com/Vishnu-11124/Calculator" class="flex items-center gap-2 text-sm bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 transition">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                    <a href="https://calculator-delta-two-99.vercel.app/" class="flex items-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        Live
+                                    </a>
+                                </div>
                             </div>
-                            <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
-                                <a href="https://calculator-delta-two-99.vercel.app/"><img src="./images/send-icon.png" class="w-3" alt=""></a>
-                            </div> 
                         </div>
                     </div>
                 </div>
 
-                <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
-                    <div class="bg-gray-100 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7">
-
-                        <div class="flex flex-col items-center justify-center">
-                            <h2 class="font-semibold text-black">Frontend Project</h2>
-                            <p class="text-sm text-gray-700">Web Design</p>
-                        </div>
-                        
-                        <div class="flex items-center gap-3 mt-2">
-                            <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
-                                <a href=""><img src="./images/github.png" class="w-6" alt=""></a>
+                 <!-- Project 1 - Calculator -->
+                <div class="slide p-4">
+                    <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg relative group h-96">
+                        <div class="shine-effect h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/16559931/pexels-photo-16559931.jpeg');">
+                            <!-- Overlay -->
+                            <div class="project-overlay"></div>
+                            
+                            <!-- Content -->
+                            <div class="project-content text-white">
+                                <h3 class="text-2xl font-bold mb-2">Modern Calculator</h3>
+                                <p class="text-sm text-gray-200 mb-4">A sleek, responsive calculator with modern UI and smooth animations</p>
+                                
+                                <!-- Tech Stack -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs bg-orange-500 text-white px-3 py-1 rounded-full">HTML</span>
+                                    <span class="tech-badge text-xs bg-blue-500 text-white px-3 py-1 rounded-full">CSS</span>
+                                    <span class="tech-badge text-xs bg-yellow-500 text-white px-3 py-1 rounded-full">JavaScript</span>
+                                </div>
+                                
+                                <!-- Links -->
+                                <div class="flex items-center gap-3">
+                                    <a href="https://github.com/Vishnu-11124/Calculator" class="flex items-center gap-2 text-sm bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 transition">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                    <a href="https://calculator-delta-two-99.vercel.app/" class="flex items-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                </div>
                             </div>
-                            <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
-                                <a href=""><img src="./images/send-icon.png" class="w-3" alt=""></a>
-                            </div> 
                         </div>
                     </div>
                 </div>
 
-                <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"> 
-                    <div class="bg-gray-100 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7">
-
-                        <div class="flex flex-col items-center justify-center">
-                            <h2 class="font-semibold text-black">Frontend Project</h2>
-                            <p class="text-sm text-gray-700">Web Design</p>
-                        </div>
-                        
-                        <div class="flex items-center gap-3 mt-2">
-                            <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
-                                <a href=""><img src="./images/github.png" class="w-6" alt=""></a>
+                <!-- Project 2 -->
+                <div class="slide p-4">
+                    <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg relative group h-96">
+                        <div class="shine-effect h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/8260666/pexels-photo-8260666.jpeg');">
+                            <div class="project-overlay"></div>
+                            <div class="project-content text-white">
+                                <h3 class="text-2xl font-bold mb-2">Portfolio Website</h3>
+                                <p class="text-sm text-gray-200 mb-4">A modern portfolio website with smooth animations and responsive design</p>
+                                
+                                <div class="flex items-center gap-3">
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 transition">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        Live
+                                    </a>
+                                </div>
                             </div>
-                            <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
-                                <a href=""><img src="./images/send-icon.png" class="w-3" alt=""></a>
-                            </div> 
                         </div>
                     </div>
                 </div>
 
-                <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">   
-                    <div class="bg-gray-100 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex flex-col items-center justify-between duration-500 group-hover:bottom-7">
-
-                        <div class="flex flex-col items-center justify-center">
-                            <h2 class="font-semibold text-black">Frontend Project</h2>
-                            <p class="text-sm text-gray-700">Web Design</p>
-                        </div>
-                        
-                        <div class="flex items-center gap-3 mt-2">
-                            <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
-                                <a href=""><img src="./images/github.png" class="w-6" alt=""></a>
+                <!-- Project 3 -->
+                <div class="slide p-4">
+                    <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg relative group h-96">
+                        <div class="shine-effect h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/11689559/pexels-photo-11689559.jpeg');">
+                            <div class="project-overlay"></div>
+                            <div class="project-content text-white">
+                                <h3 class="text-2xl font-bold mb-2">E-Commerce Dashboard</h3>
+                                <p class="text-sm text-gray-200 mb-4">Interactive dashboard with data visualization and analytics</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs bg-blue-500 text-white px-3 py-1 rounded-full">React</span>
+                                    <span class="tech-badge text-xs bg-cyan-500 text-white px-3 py-1 rounded-full">Tailwind</span>
+                                    <span class="tech-badge text-xs bg-green-500 text-white px-3 py-1 rounded-full">Chart.js</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 transition">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                </div>
                             </div>
-                            <div class="border rounded-full border-black w-7 aspect-square flex items-center justify-center shadow-[2px_2px_0_black] group-hover:bg-lime-300 transition">
-                                <a href=""><img src="./images/send-icon.png" class="w-3" alt=""></a>
-                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="slide p-4">
+                    <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg relative group h-96">
+                        <div class="shine-effect h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/25988093/pexels-photo-25988093.jpeg');">
+                            <div class="project-overlay"></div>
+                            <div class="project-content text-white">
+                                <h3 class="text-2xl font-bold mb-2">Weather App</h3>
+                                <p class="text-sm text-gray-200 mb-4">Real-time weather application with geolocation features</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs bg-orange-500 text-white px-3 py-1 rounded-full">HTML</span>
+                                    <span class="tech-badge text-xs bg-blue-500 text-white px-3 py-1 rounded-full">CSS</span>
+                                    <span class="tech-badge text-xs bg-yellow-500 text-white px-3 py-1 rounded-full">API</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 transition">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="slide p-4">
+                    <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg relative group h-96">
+                        <div class="shine-effect h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/32405729/pexels-photo-32405729.jpeg');">
+                            <div class="project-overlay"></div>
+                            <div class="project-content text-white">
+                                <h3 class="text-2xl font-bold mb-2">Task Manager</h3>
+                                <p class="text-sm text-gray-200 mb-4">Productivity app with drag-and-drop functionality</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs bg-blue-500 text-white px-3 py-1 rounded-full">React</span>
+                                    <span class="tech-badge text-xs bg-purple-500 text-white px-3 py-1 rounded-full">DnD Kit</span>
+                                    <span class="tech-badge text-xs bg-cyan-500 text-white px-3 py-1 rounded-full">Tailwind</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 transition">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Project 5 -->
+                <div class="slide p-4">
+                    <div class="project-card bg-white rounded-2xl overflow-hidden shadow-lg relative group h-96">
+                        <div class="shine-effect h-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/32405729/pexels-photo-32405729.jpeg');">
+                            <div class="project-overlay"></div>
+                            <div class="project-content text-white">
+                                <h3 class="text-2xl font-bold mb-2">Task Manager</h3>
+                                <p class="text-sm text-gray-200 mb-4">Productivity app with drag-and-drop functionality</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tech-badge text-xs bg-blue-500 text-white px-3 py-1 rounded-full">React</span>
+                                    <span class="tech-badge text-xs bg-purple-500 text-white px-3 py-1 rounded-full">DnD Kit</span>
+                                    <span class="tech-badge text-xs bg-cyan-500 text-white px-3 py-1 rounded-full">Tailwind</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-white text-gray-800 px-4 py-2 rounded-full hover:bg-gray-100 transition">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        GitHub
+                                    </a>
+                                    <a href="#" class="flex items-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="#" class="w-max flex items-center justify-center gap-2 text-blue-400 border-[0.5px] border-gray-700 py-3 px-10 mx-auto my-20 rounded-full hover:bg-[#fcf4ff] duration-500">Show More </a>
         </div>
-        
+
+        <!-- Dots Navigation -->
+        <div class="dots-container" id="dotsContainer"></div>
+    </div>
+
         <!-- Contact Section  -->
         <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center">
             <h4 class="text-center mb-2 text-lg">Connect with me</h4>
