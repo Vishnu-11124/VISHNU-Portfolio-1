@@ -5,22 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/arrow.png" type="image/x-icon">
     <title>VISHNU - Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <!-- Custom CSS files -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- Tailwind CSS files -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          
-        }
-      },
+    <link rel="stylesheet" href="styles/output.css">
 
-      darkMode: 'selector'
-
-    }
-  </script>
 </head>
 <body class="dark:bg-gray-900 dark:text-white transition duration-500">
     <!-- Splash Screen -->
@@ -45,14 +38,14 @@
                 <a href="#contact" class="hidden lg:flex item-center gap-3 px-10 py-2.5  text-black border border-gray-500 bg-gray-100 rounded-full ml-4">Contact</a>  
                     
                 <button class="block md:hidden ml-3" onclick="openMenu()">
-                    <img src="./images/menu-black.png" class="w-6" alt="">
+                    <img loading="lazy" src="./images/menu-black.png" class="w-6" alt="">
                 </button>
             </div>
 
             <!-- Mobile section -->
             <ul id="sideMenu" class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen text-blue-400 bg-gray-100 transition duration-500 gap-4">
                 <div class="absolute top-6 right-6" onclick="closeMenu()">
-                    <img src="./images/close-black.png" class="w-5 cursor-pointer" alt="">
+                    <img loading="lazy" src="./images/close-black.png" class="w-5 cursor-pointer" alt="">
                 </div>
                 <li><a href="#" onclick="closeMenu()">Home</a></li>
                 <li><a href="#about" onclick="closeMenu()">About Me</a></li>
@@ -82,7 +75,7 @@
             <h2 class="text-center text-5xl">About Me</h2>
             <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
                 <div class="max-w-max mx-auto relative">
-                    <img src="./images/user.jpg" class="w-64 sm:w-80 rounded-3xl max-w-none" alt="">
+                    <img loading="lazy" src="./images/user.jpg" class="w-64 sm:w-80 rounded-3xl max-w-none" alt="">
                 </div>
                 <div class="flex-1">
                     <p class="mb-10 max-w-2xl">Passionate about building responsive and user-friendly web interfaces, I am eager to level up my skills and grow with forward-thinking companies while contributing to impactful projects.</p>
@@ -90,69 +83,69 @@
                     <ul class="grid grid-cols-2 lg:grid-cols-6 ml-2 max-w-2xl">
                         
                         <!-- <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black]">
-                            <img src="./images/code-icon.png" class="w-7 mt-3" alt="">
+                            <img loading="lazy" src="./images/code-icon.png" class="w-7 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Skills</h3>
                             <p class="text-gray-600 text-sm">HTML, CSS, JavaScript, Python, React.js</p>
-                            <a href="" class="flex items-center gap-2 text-sm text-blue-400 mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a>
+                            <a href="" class="flex items-center gap-2 text-sm text-blue-400 mt-5">More Info<img loading="lazy" src="./images/right-arrow.png" class="w-4" alt=""></a>
                         </li>
                         <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black]">
-                            <img src="./images/edu-icon.png" class="w-7 mt-3" alt="">
+                            <img loading="lazy" src="./images/edu-icon.png" class="w-7 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Education</h3>
                             <p class="text-gray-600 text-sm">MCA from Kannur University</p>
-                            <a href="#education" class="flex items-center gap-2 text-sm text-blue-400 mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a>
+                            <a href="#education" class="flex items-center gap-2 text-sm text-blue-400 mt-5">More Info<img loading="lazy" src="./images/right-arrow.png" class="w-4" alt=""></a>
                         </li>
                         <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black]">
-                            <img src="./images/project-icon.png" class="w-7 mt-3" alt="">
+                            <img loading="lazy" src="./images/project-icon.png" class="w-7 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Experience</h3>
                             <p class="text-gray-600 text-sm">Web development Intern</p>
-                            <a href="#experience" class="flex items-center gap-2 text-sm text-blue-400 mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a>
+                            <a href="#experience" class="flex items-center gap-2 text-sm text-blue-400 mt-5">More Info<img loading="lazy" src="./images/right-arrow.png" class="w-4" alt=""></a>
                         </li> -->
                         <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/html.png" class="w-7 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/html.png" class="w-7 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">HTML</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/css.png" class="w-9 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/css.png" class="w-9 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">CSS</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/js.png" class="w-14 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/js.png" class="w-14 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">JavaScript</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/python.png" class="w-7 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/python.png" class="w-7 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Python</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/tailwind.png" class="w-8 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/tailwind.png" class="w-8 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Tailwind</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/github.png" class="w-8 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/github.png" class="w-8 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">GitHub</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/vscode.png" class="w-9 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/vscode.png" class="w-9 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">VS Code</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/bootstrap.png" class="w-9 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/bootstrap.png" class="w-9 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Bootstrap</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/git.png" class="w-8 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/git.png" class="w-8 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Git</h3>   
                         </li>
                         <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/canva.png" class="w-9 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/canva.png" class="w-9 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">Canva</h3>   
                         </li>
                         <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/mysql.png" class="w-8 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/mysql.png" class="w-8 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">MySql</h3>   
                         </li>
                          <li class="border-[0.5px] border-gray-400 rounded-xl p-2 w-[100px] cursor-pointer bg-gray-100 hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px__0_black] flex flex-col items-center justify-center mb-2">
-                            <img src="./images/skills/c.png" class="w-11 mt-3" alt="">
+                            <img loading="lazy" src="./images/skills/c.png" class="w-11 mt-3" alt="">
                             <h3 class="my-4 font-semibold text-gray-700">C</h3>   
                         </li>
                     </ul>
@@ -167,27 +160,27 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
                 <div class="border border-gray-400 rounded-lg px-8 py-12 bg-gray-100 hover:shadow-[4px_4px__0_black] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
                     <div class="flex gap-2">
-                        <img src="./images/logo.jpg" class="w-8" alt="">
+                        <img loading="lazy" src="./images/logo.jpg" class="w-8" alt="">
                         <h3 class="text-md text-gray-700 my-3">Kannur University</h3>
                     </div>
                     <h3 class="text-lg text-gray-700 my-3">MCA</h3>
                     <div class="my-2">
                         <p class="text-sm text-gray-600 leading-5">2023 - 2025</p>
                         <p class="text-sm text-gray-600 leading-5">Chinmaya Institute of Technology</p>
-                        <!-- <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a> -->
+                        <!-- <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img loading="lazy" src="./images/right-arrow.png" class="w-4" alt=""></a> -->
                     </div>
                 </div>
 
                 <div class="border border-gray-400 rounded-lg px-8 py-12 bg-gray-100 hover:shadow-[4px_4px__0_black] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
                     <div class="flex gap-2">
-                        <img src="./images/logo.jpg" class="w-8" alt="">
+                        <img loading="lazy" src="./images/logo.jpg" class="w-8" alt="">
                         <h3 class="text-md text-gray-700 my-3">Kannur University</h3>
                     </div>
                     <h3 class="text-lg text-gray-700 my-3">Bsc CS</h3>
                     <div class="my-2">
                         <p class="text-sm text-gray-600 leading-5">2020 - 2023</p>
                         <p class="text-sm text-gray-600 leading-5">Taliparamba Arts & Science College</p>
-                        <!-- <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a> -->
+                        <!-- <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img loading="lazy" src="./images/right-arrow.png" class="w-4" alt=""></a> -->
                     </div>
                 </div>
             </div>
@@ -200,12 +193,12 @@
             <div class="grid grid-cols-1 gap-6 my-10">
                 <div class="border border-gray-400 rounded-lg px-8 py-12 bg-gray-100 hover:shadow-[4px_4px__0_black] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
                     <div class="flex gap-3">
-                        <img src="./images/zidio.png" class="w-8 " alt="">
+                        <img loading="lazy" src="./images/zidio.png" class="w-8 " alt="">
                         <h3 class="text-md text-gray-700 my-3">Zidio Development</h3>
                     </div>
                     <h3 class="text-lg my-4 text-gray-700">Web Development Intern</h3>
                     <p class="text-sm text-gray-600 leading-5">Web development is the process of building, programming...</p>
-                    <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img src="./images/right-arrow.png" class="w-4" alt=""></a>
+                    <a href="" class="flex items-center gap-2 text-sm mt-5">More Info<img loading="lazy" src="./images/right-arrow.png" class="w-4" alt=""></a>
                 </div>
             </div>
         </div>
@@ -498,7 +491,7 @@
                </div> -->
                 
                 <div class="w-max flex items-center gap-2 mx-auto">
-                    <img src="./images/mail_icon.png" class="w-6" alt="">vishnusanthosh11124@gmail.com
+                    <img loading="lazy" src="./images/mail_icon.png" class="w-6" alt="">vishnusanthosh11124@gmail.com
                 </div>
             </div>
             <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[8%] mt-12 py-6">
@@ -512,6 +505,6 @@
         </div>
 
     <!-- Custom Js files -->
-     <script src="scripts/script.js"></script>
+     <script src="scripts/script.js" defer></script>
 </body>
 </html>
